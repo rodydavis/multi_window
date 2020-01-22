@@ -71,7 +71,7 @@ class _HomeScreenState extends State<HomeScreen> {
               print("Offset: $_offset, Size: $_size");
               await WindowUtils.createWindow(
                 WindowUtils.generateKey(),
-                offset: (_offset.translate(_offset.dx + 50, _offset.dy + 50)),
+                offset: (_offset.translate(_offset.dx + 2, _offset.dy - 2)),
                 size: _size,
               );
               final _key = await WindowUtils.lastWindowKey();
@@ -196,7 +196,7 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 class WindowUtils {
-  static const _channel = const MethodChannel('window_controller');
+  static const _channel = const MethodChannel('plugins.rive.app/window_manager');
 
   static final Random _random = Random.secure();
 
