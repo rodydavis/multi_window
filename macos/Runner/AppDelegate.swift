@@ -30,7 +30,7 @@ class WindowManagerPlugin: NSObject, FlutterPlugin {
     var _controllers: [(String, FlutterViewController, NSWindow)] = []
 
     public static func register(with registrar: FlutterPluginRegistrar) {
-        let channelName = "plugins.rive.app/window_manager"
+        let channelName = "window_controller"
         let channel = FlutterMethodChannel(name: channelName, binaryMessenger: registrar.messenger)
         let instance = WindowManagerPlugin()
         registrar.addMethodCallDelegate(instance, channel: channel)

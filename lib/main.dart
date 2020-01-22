@@ -196,7 +196,7 @@ class _HomeScreenState extends State<HomeScreen> {
 }
 
 class WindowUtils {
-  static const _channel = const MethodChannel('plugins.rive.app/window_manager');
+  static const _channel = const MethodChannel('window_controller');
 
   static final Random _random = Random.secure();
 
